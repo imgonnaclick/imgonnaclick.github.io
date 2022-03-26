@@ -1,0 +1,87 @@
+.panel {
+  position: fixed;
+  top:0;
+  left:0;
+
+  height: 100%;
+  width: 100px;
+
+  background-color: gray;
+
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.panel_div {
+  text-align: center;
+  align-items: center;
+
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left:0;
+  width: 100px;
+
+  font-size: 73px;
+}
+
+
+
+.reszta {
+  position: fixed;
+  top: 0;
+  left: 100px;
+
+  height: 100%;
+  width: calc(100vw - 100px);
+
+  text-align: center;
+}
+
+.obrazek {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+
+  max-width: 70%;
+}
+
+.kontener_obrazka { /*wycentrowanie go*/
+  position: fixed;
+  top: 0;
+  left: 100px;
+
+  height: 100%;
+  width: calc(100vw - 100px);
+}
+
+h1#pkt_teraz {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.przycisk {
+  width: 100px;
+  height: 80px;
+
+  background-color: white;
+  color: black;
+  font-family: ubuntu, sans-serif;
+  font-size: 24px;
+
+  border: none;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.przycisk:hover {
+  color: white;
+  background-color: gray;
+  border: 5px solid white;
+
+
+}

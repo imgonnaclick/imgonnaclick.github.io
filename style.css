@@ -1,0 +1,20 @@
+@font-face {
+  font-family: big-noodle;
+  src: url(big-noodle-too-oblique.ttf);
+}
+
+@font-face {
+  font-family: ubuntu;
+  src: url(Ubuntu-Medium.ttf);
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  font-size: 24px;
+  color: white;
+  font-family: big-noodle, sans-serif;
+}
+
+
+/*#0f1315*/
