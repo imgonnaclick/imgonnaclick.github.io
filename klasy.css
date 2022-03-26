@@ -50,14 +50,7 @@
   max-width: 70%;
 }
 
-.kontener_obrazka { /*wycentrowanie go*/
-  position: fixed;
-  top: 0;
-  left: 100px;
 
-  height: 100%;
-  width: calc(100vw - 100px);
-}
 
 h1#pkt_teraz {
   margin-left: auto;
