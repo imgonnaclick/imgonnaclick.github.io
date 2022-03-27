@@ -22,6 +22,7 @@ if (localStorage.pkt && localStorage.wszystkie && localStorage.klikniecia) {
 
 if (localStorage.lvl) {
   lvl = parseInt(localStorage.lvl);
+  document.getElementById("lvlup").innerHTML="LVL "+lvl;
 } else {
   localStorage.lvl=lvl;
 }
@@ -55,6 +56,7 @@ function lvlup() {
     wartosc=lvl_wartosc[lvl-1]
 
     document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
+    document.getElementById("lvlup").innerHTML="LVL "+lvl;
 
     localStorage.pkt = pkt; //save
     localStorage.lvl = lvl;
