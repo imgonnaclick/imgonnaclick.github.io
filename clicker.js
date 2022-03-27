@@ -2,6 +2,7 @@ let pkt=0.0; //obecnie
 let wszystkie=0.0;
 let klikniecia=0;
 let wartosc=1.0;
+let wartosc_passive=0;
 
 let lvl=1; //max lvl 40
 let lvl_wartosc=[1, 2.05, 1.1, 1.2, 1.3, 1.5, 1.8, 2, 2.5, 3, 5, 7, 10, 13, 15, 20, 25, 40, 60, 100, 130, 150, 200, 250, 300, 400, 500, 1000, 1300, 2000, 3000, 5000, 10000, 20000, 30000, 100000, 300000, 1000000, 10000000, 1000000000]; //index+1
@@ -72,6 +73,15 @@ function cleareg() {
   location.reload(false)
 }
 
+function pasywne_kopanie() {
+  pkt+=wartosc_passive;
+  document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
+
+  localStorage.pkt = pkt;
+}
+
+
+pasywne_kopanie_interval = setInterval(pasywne_kopanie, 1000);
 
 
 
@@ -109,11 +119,6 @@ function cleareg() {
 
 
 
-
-
-document.addEventListener('touchmove', function (event) {
-  if (event.scale !== 1) { event.preventDefault(); }
-}, { passive: false });
 /*
 function lvlup() {
   if (lvl<30) {
