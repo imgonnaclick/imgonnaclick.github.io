@@ -6,7 +6,9 @@
   height: 100%;
   width: 100px;
 
-  background-color: gray;
+  /*background-color: gray;*/
+  background-color: rgba(209, 209, 209, 0.68);
+
 
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
@@ -19,10 +21,8 @@
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  left:0;
+  left: 0;
   width: 100px;
-
-  font-size: 73px;
 }
 
 
@@ -61,6 +61,8 @@ h1#pkt_teraz {
   width: 100px;
   height: 80px;
 
+  margin: 0px;
+
   background-color: white;
   color: black;
   font-family: ubuntu, sans-serif;
@@ -69,12 +71,26 @@ h1#pkt_teraz {
   border: 5px solid white;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
+  transition: 0.3s;
+
+  outline: 0px solid white;
 }
 
 .przycisk:hover {
-  color: white;
-  background-color: gray;
+  font-size: 32px;
+
+
+
+
+
 
 
   transition: 0.3s;
+}
+
+.przycisk:active {
+  color: white;
+  background-color: gray;
+
+  transition: 0.05s;
 }
