@@ -51,7 +51,7 @@ function lewyxd() {
   localStorage.wszystkie = wszystkie;
 
 }
-//document.getElementById("idokienka").style.getPropertyValue("visibility")
+
 function okno(type) {
   let kontenerokienka = document.getElementById("kontenerokienka");
   let idokienka = document.getElementById("idokienka");
