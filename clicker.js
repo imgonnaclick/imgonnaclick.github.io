@@ -13,10 +13,7 @@ if (localStorage.pkt && localStorage.wszystkie && localStorage.klikniecia) {
   wszystkie = parseFloat(localStorage.wszystkie);
   klikniecia = parseInt(localStorage.klikniecia);
 
-  document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
   wartosc=lvl_wartosc[lvl-1];
-  document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
-  document.getElementById("upgrade").innerHTML="UPGRADE "+lvl_cena[lvl]+"$";
 } else {
   localStorage.pkt=pkt;
   localStorage.wszystkie=wszystkie;
@@ -25,17 +22,18 @@ if (localStorage.pkt && localStorage.wszystkie && localStorage.klikniecia) {
 
 if (localStorage.lvl) {
   lvl = parseInt(localStorage.lvl);
-  document.getElementById("lvlup").innerHTML="LVL "+lvl;
-  document.getElementById("lvl_text").innerHTML="LVL: "+lvl;
   wartosc=lvl_wartosc[lvl-1];
-  document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
-  document.getElementById("upgrade").innerHTML="UPGRADE "+lvl_cena[lvl]+"$";
+
 } else {
   localStorage.lvl=lvl;
 }
 
+document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
+document.getElementById("lvlup").innerHTML="LVL "+lvl;
+document.getElementById("lvl_text").innerHTML="LVL: "+lvl;
+document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
 document.getElementById("upgrade").innerHTML="UPGRADE "+lvl_cena[lvl]+"$";
-
+//tu
 
 
 
