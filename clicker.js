@@ -16,6 +16,7 @@ if (localStorage.pkt && localStorage.wszystkie && localStorage.klikniecia) {
   document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
   wartosc=lvl_wartosc[lvl-1];
   document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
+  document.getElementById("upgrade").innerHTML="UPGRADE "+lvl_cena[lvl]+"$";
 } else {
   localStorage.pkt=pkt;
   localStorage.wszystkie=wszystkie;
@@ -28,11 +29,12 @@ if (localStorage.lvl) {
   document.getElementById("lvl_text").innerHTML="LVL: "+lvl;
   wartosc=lvl_wartosc[lvl-1];
   document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
+  document.getElementById("upgrade").innerHTML="UPGRADE "+lvl_cena[lvl]+"$";
 } else {
   localStorage.lvl=lvl;
 }
 
-
+document.getElementById("upgrade").innerHTML="UPGRADE "+lvl_cena[lvl]+"$";
 
 
 
@@ -74,6 +76,7 @@ function lvlup() {
     lvl++;
     wartosc=lvl_wartosc[lvl-1];
     document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
+    document.getElementById("upgrade").innerHTML="UPGRADE "+lvl_cena[lvl]+"$";
 
     document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
     document.getElementById("lvlup").innerHTML="LVL "+lvl;
@@ -101,7 +104,7 @@ function pasywne_kopanie() {
 }
 
 
-pasywne_kopanie_interval = setInterval(pasywne_kopanie, 1000);
+//pasywne_kopanie_interval = setInterval(pasywne_kopanie, 1000);
 
 
 
