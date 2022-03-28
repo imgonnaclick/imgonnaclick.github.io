@@ -67,61 +67,29 @@ h1#pkt_teraz {
 
   margin: 0px;
 
-  background-color: white;
+  background-color: rgba(255,255,255,1);
   color: black;
 
   font-family: ubuntu, sans-serif;
   font-size: 24px;
   white-space: nowrap;
 
-  border: 5px solid white;
+  border:none;
+  /*border: 5px solid white;
   border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-right-radius: 15px;*/
 
   transition: 0.3s;
 }
 
 .przycisk:hover {
+  background-color: rgba(230,230,230,1);
   font-size: 30px;
-
   transition: 0.3s;
 }
 
 .przycisk:active {
-  color: white;
-  background-color: gray;
+  background-color: transparent;
 
   transition: 0.05s;
-}
-
-.okienko {
-  transition: 0.3s;
-  visibility: hidden;
-
-  height: 90%;
-  width: 90%;
-
-  margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
-  position: relative;
-
-  color: transparent;
-
-  background-color: rgba(209, 209, 209, 0.1);
-  -webkit-backdrop-filter: blur(0px);
-  backdrop-filter: blur(0px);
-  border: 1px solid transparent;
-  border-radius: 15px;
-}
-
-.okienko_on {
-  transition: 0.3s;
-  visibility: visible;
-  background-color: rgba(209, 209, 209, 0.68);
-  -webkit-backdrop-filter: blur(9px);
-  backdrop-filter: blur(9px);
-  border: 1px solid gray;
-
-  color:black;
 }

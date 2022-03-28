@@ -1,0 +1,71 @@
+.okienko {
+  transition: 0.3s;
+  visibility: hidden;
+
+  height: 90%;
+  width: 90%;
+
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+
+  color: transparent;
+
+  background-color: rgba(209, 209, 209, 0.1);
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+
+.okienko_on {
+  transition: 0.3s;
+  visibility: visible;
+  background-color: rgba(209, 209, 209, 0.68);
+  -webkit-backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px);
+  border: 1px solid gray;
+
+  color:black;
+}
+
+.okienko .inner_przycisk {
+  background-color: transparent;
+  color: transparent;
+}
+
+.okienko_on .inner_przycisk {
+  background-color: rgba(255,255,255,1);
+  color: black;
+}
+
+.inner_przycisk {
+  width: 95%;
+  height: 100px;
+
+  margin: 0px;
+  border: none;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+
+  background-color: rgba(255,255,255,1);
+  color: black;
+
+  font-family: ubuntu, sans-serif;
+  font-size: 24px;
+
+
+  transition: 0.3s;
+}
+
+.inner_przycisk:hover{
+  font-size: 30px;
+  transition: 0.3s;
+  background-color: rgba(230,230,230,1);
+}
+
+.inner_przycisk:active {
+  transition: 0.05s;
+  background-color: transparent;
+}
