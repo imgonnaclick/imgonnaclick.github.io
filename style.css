@@ -1,7 +1,7 @@
-@font-face {
+/*@font-face {
   font-family: big-noodle;
   src: url(big-noodle-too-oblique.ttf);
-}
+}*/
 
 @font-face {
   font-family: ubuntu;
@@ -13,7 +13,7 @@ body {
   background-color: black;
   font-size: 24px;
   color: white;
-  font-family: big-noodle, sans-serif;
+  font-family: ubuntu, sans-serif;
 }
 
 
