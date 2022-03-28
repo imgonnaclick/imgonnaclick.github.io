@@ -11,7 +11,7 @@
   <body>
     <div class="panel">
       <div class="panel_div">
-        <button type="button" name="button" class="przycisk" onclick="lvlup()" id="lvlup">LVL 1</button>
+        <button type="button" name="button" class="przycisk" onclick="okno(0)" id="lvlup">LVL 1</button>
         <button type="button" name="button" class="przycisk" onclick="cleareg()">clear</button>
       </div>
     </div>
@@ -23,21 +23,30 @@
     <div class="reszta">
 
       <h1 id="pkt_teraz">0</h1>
-      <script src="clicker.js"></script>
+
       <div class="reszta">
         <img src="main.jpg" alt="main" onclick="lewyxd()" role="button" tabindex="1" class="obrazek">
       </div>
-
-
-
     </div>
 
+    <div class="reszta" style="pointer-events: none;" id="kontenerokienka">
+        <div class="okienko" id="idokienka">
+          <div id="div_lvl">
 
-    <!--<div class="panel_div" style="left: 100px; width: 200px; pointer-events: none;">
-        <div class="tooltip">
-          jd
+            <div id="lvl_text">
+              LVL 1
+            </div>
+            <button type="button" name="button" class="przycisk" onclick="lvlup()">UPGRADE</button>
+            <div id="wartosc_text">
+              Wartość: 1
+            </div>
+
+          </div>
+
+
         </div>
-    </div>-->
+    </div>
 
+    <script src="clicker.js"></script>
   </body>
 </html>

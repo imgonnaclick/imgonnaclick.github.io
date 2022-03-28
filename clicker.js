@@ -14,7 +14,8 @@ if (localStorage.pkt && localStorage.wszystkie && localStorage.klikniecia) {
   klikniecia = parseInt(localStorage.klikniecia);
 
   document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
-  wartosc=lvl_wartosc[lvl-1]
+  wartosc=lvl_wartosc[lvl-1];
+  document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
 } else {
   localStorage.pkt=pkt;
   localStorage.wszystkie=wszystkie;
@@ -24,9 +25,13 @@ if (localStorage.pkt && localStorage.wszystkie && localStorage.klikniecia) {
 if (localStorage.lvl) {
   lvl = parseInt(localStorage.lvl);
   document.getElementById("lvlup").innerHTML="LVL "+lvl;
+  document.getElementById("lvl_text").innerHTML="LVL: "+lvl;
+  wartosc=lvl_wartosc[lvl-1];
+  document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
 } else {
   localStorage.lvl=lvl;
 }
+
 
 
 
@@ -46,18 +51,33 @@ function lewyxd() {
   localStorage.wszystkie = wszystkie;
 
 }
+//document.getElementById("idokienka").style.getPropertyValue("visibility")
+function okno(type) {
+  let kontenerokienka = document.getElementById("kontenerokienka");
+  let idokienka = document.getElementById("idokienka");
 
-
+  if(kontenerokienka.style.getPropertyValue("pointer-events") == "all") {
+    kontenerokienka.style.pointerEvents = "none";
+    //idokienka.style.visibility = "hidden";
+    idokienka.className = "okienko"
+  } else {
+    kontenerokienka.style.pointerEvents = "all";
+    //idokienka.style.visibility = "visible";
+    idokienka.className ="okienko okienko_on"
+  }
+}
 
 
 function lvlup() {
   if(pkt>=lvl_cena[lvl]) {
     pkt-=lvl_cena[lvl];
     lvl++;
-    wartosc=lvl_wartosc[lvl-1]
+    wartosc=lvl_wartosc[lvl-1];
+    document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
 
     document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
     document.getElementById("lvlup").innerHTML="LVL "+lvl;
+    document.getElementById("lvl_text").innerHTML="LVL: "+lvl;
 
     localStorage.pkt = pkt; //save
     localStorage.lvl = lvl;
