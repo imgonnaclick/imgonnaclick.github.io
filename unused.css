@@ -21,3 +21,8 @@
 .przycisk:hover .tooltip{
   visibility: visible;
 }
+
+/*@font-face {
+  font-family: big-noodle;
+  src: url(big-noodle-too-oblique.ttf);
+}*/
