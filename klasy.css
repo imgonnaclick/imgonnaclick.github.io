@@ -73,6 +73,7 @@ h1#pkt_teraz {
   font-family: ubuntu, sans-serif;
   font-size: 22px;
   white-space: nowrap;
+  text-align: center;
 
   border:none;
   /*border: 5px solid white;
