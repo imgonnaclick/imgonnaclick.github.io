@@ -34,7 +34,7 @@ document.getElementById("lvl_text").innerHTML="LVL: "+lvl;
 document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
 document.getElementById("upgrade").innerHTML="UPGRADE "+lvl_cena[lvl]+"$";
 //tu
-
+let old_type=0;
 
 
 
@@ -55,16 +55,69 @@ function lewyxd() {
 function okno(type) {
   let kontenerokienka = document.getElementById("kontenerokienka");
   let idokienka = document.getElementById("idokienka");
+  let actual_div = document.getElementById("div_lvl");
+  let div_lvl = document.getElementById("div_lvl");
+  let div_sklep = document.getElementById("div_sklep");
+  let div_staty = document.getElementById("div_staty");
+  let div_ustawienia = document.getElementById("div_ustawienia");
+                //0=lvl 1=sklep 2=staty 3=ustawienia
+  if(type==0){
+    actual_div = div_lvl;
+  } else if(type==1) {
+    actual_div = div_sklep;
+  } else if (type==2) {
+    actual_div = div_staty;
+  } else if (type==3) {
+    actual_div = div_ustawienia;
+  }
+
 
   if(kontenerokienka.style.getPropertyValue("pointer-events") == "all") {
-    kontenerokienka.style.pointerEvents = "none";
-    //idokienka.style.visibility = "hidden";
-    idokienka.className = "okienko"
+
+    if (old_type==type) {
+      kontenerokienka.style.pointerEvents = "none";
+      //idokienka.style.visibility = "hidden";
+      idokienka.className = "okienko"
+      div_lvl.className = "div_hidden";
+      div_sklep.className = "div_hidden";
+      div_staty.className = "div_hidden";
+      div_ustawienia.className = "div_hidden";
+    } else if (type==0) {
+      div_sklep.className = "div_hidden";
+      div_staty.className = "div_hidden";
+      div_ustawienia.className = "div_hidden";
+      div_lvl.className = "div_hidden div_visible";
+    } else if (type==1) {
+      div_lvl.className = "div_hidden";
+      div_staty.className = "div_hidden";
+      div_ustawienia.className = "div_hidden";
+      div_sklep.className = "div_hidden div_visible";
+    } else if (type==2) {
+      div_lvl.className = "div_hidden";
+      div_ustawienia.className = "div_hidden";
+      div_sklep.className = "div_hidden";
+      div_staty.className = "div_hidden div_visible";
+    } else if (type==3) {
+      div_lvl.className = "div_hidden";
+      div_staty.className = "div_hidden";
+      div_sklep.className = "div_hidden";
+      div_ustawienia.className = "div_hidden div_visible";
+    }
+
+
+
+
+
+
+
   } else {
     kontenerokienka.style.pointerEvents = "all";
     //idokienka.style.visibility = "visible";
-    idokienka.className ="okienko okienko_on"
+    idokienka.className = "okienko okienko_on"
+    actual_div.className = "div_visible";
   }
+
+  old_type=type;
 }
 
 

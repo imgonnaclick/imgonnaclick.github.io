@@ -13,7 +13,9 @@
     <div class="panel">
       <div class="panel_div">
         <button type="button" name="button" class="przycisk" onclick="okno(0)" id="lvlup">LVL 1</button>
-        <button type="button" name="button" class="przycisk" onclick="cleareg()">clear</button>
+        <button type="button" name="button" class="przycisk" onclick="okno(1)" id="sklep">SKLEP</button>
+        <button type="button" name="button" class="przycisk" onclick="okno(2)">STATY</button>
+        <button type="button" name="button" class="przycisk" onclick="okno(3)">OPCJE</button>
       </div>
     </div>
 
@@ -33,7 +35,7 @@
     <div class="reszta" style="pointer-events: none;" id="kontenerokienka">
         <div class="okienko" id="idokienka">
 
-          <div id="div_lvl">
+          <div id="div_lvl" class="div_hidden">
             <div id="lvl_text">
               LVL 1
             </div>
@@ -43,6 +45,17 @@
             </div>
           </div>
 
+          <div id="div_sklep" class="div_hidden">
+            skleb
+          </div>
+
+          <div id="div_staty" class="div_hidden">
+            nic nie osiągnąłeś
+          </div>
+
+          <div id="div_ustawienia" class="div_hidden">
+              <button type="button" name="button" class="inner_przycisk" onclick="cleareg()">RESET</button>
+          </div>
 
         </div>
     </div>

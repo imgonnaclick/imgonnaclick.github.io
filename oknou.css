@@ -4,6 +4,7 @@
 
   height: 90%;
   width: 90%;
+  padding: 5px;
 
   margin: auto;
   top: 50%;
@@ -67,4 +68,17 @@
 .inner_przycisk:active {
   transition: 0.05s;
   background-color: transparent;
+}
+
+.div_hidden {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  /*transition: height 0s 0.3s, opacity 0.3s 0s;*/
+}
+
+.div_visible {
+  opacity: 1;
+  height: 100%;
+  transition: height 0s 0s, opacity 0.3s 0s;
 }
