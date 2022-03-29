@@ -32,6 +32,7 @@ document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
 document.getElementById("lvlup").innerHTML="LVL "+lvl;
 document.getElementById("lvl_text").innerHTML="LVL: "+lvl;
 document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
+document.getElementById("next_wartosc_text").innerHTML="Następna wartość: "+lvl_wartosc[lvl];
 document.getElementById("upgrade").innerHTML="UPGRADE "+lvl_cena[lvl]+"$";
 //tu
 let old_type=0;
@@ -127,6 +128,7 @@ function lvlup() {
     lvl++;
     wartosc=lvl_wartosc[lvl-1];
     document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
+    document.getElementById("next_wartosc_text").innerHTML="Następna wartość: "+lvl_wartosc[lvl];
     document.getElementById("upgrade").innerHTML="UPGRADE "+lvl_cena[lvl]+"$";
 
     document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
