@@ -71,7 +71,7 @@ h1#pkt_teraz {
   color: black;
 
   font-family: ubuntu, sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   white-space: nowrap;
 
   border:none;
@@ -84,7 +84,7 @@ h1#pkt_teraz {
 
 .przycisk:hover {
   background-color: rgba(230,230,230,1);
-  font-size: 30px;
+  font-size: 28px;
   transition: 0.3s;
 }
 
