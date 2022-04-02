@@ -18,7 +18,10 @@
   backdrop-filter: blur(0px);
   border: 1px solid transparent;
   border-radius: 15px;
+
+  will-change: backdrop-filter; will-change: --webkit-backdrop-filter;
 }
+
 
 .okienko_on {
   transition: 0.3s;
@@ -63,6 +66,9 @@
   font-size: 30px;
   transition: 0.3s;
   background-color: rgba(230,230,230,1);
+}
+.nazwa_tego:hover {
+  font-size: 69px;
 }
 
 .inner_przycisk:active {
