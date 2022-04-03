@@ -1,0 +1,33 @@
+.komunikat {
+  transition: 0.3s;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  --webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+
+  background-color: rgba(95, 95, 255, 0.1);
+  color: transparent;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+
+  top: 0;
+  height: 100px;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.komunikat_on {
+  transition: 0.3s;
+  visibility: visible;
+  opacity: 1;
+  --webkit-backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px);
+
+  background-color: rgba(95, 95, 255, 0.9);
+  color: white;
+}

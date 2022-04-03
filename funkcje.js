@@ -14,9 +14,7 @@ function lewyxd() {
   wszystkie+=wartosc; //staty
   klikniecia++;
 
-  localStorage.pkt = pkt; //save
-  localStorage.klikniecia = klikniecia;
-  localStorage.wszystkie = wszystkie;
+  local_save();
 
 }
 
@@ -74,10 +72,6 @@ function okno(type) {
 
 
 
-
-
-
-
   } else {
     kontenerokienka.style.pointerEvents = "all";
     //idokienka.style.visibility = "visible";
@@ -117,6 +111,10 @@ function cleareg() {
 
 function pasywne_kopanie() {
   pkt+=wartosc_passive;
+  wszystkie+=wartosc_passive;
+  if(wartosc_passive>=0.1){
+    przyznanych_pasywek++;
+  }
   document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
 
   localStorage.pkt = pkt;
@@ -126,6 +124,7 @@ function pasywne_kopanie() {
 pasywne_kopanie_interval = setInterval(pasywne_kopanie, 1000);
 
 function p_kopanie_wartosc(rozmiar) {
+  komunikat();
   if (rozmiar==0 && pkt>=10) { //np 0 - 0.1, 1 - 1, 2 - 10, 3 - 100
     pkt-=10;
     wartosc_passive+=0.1;
