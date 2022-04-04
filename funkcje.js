@@ -84,7 +84,8 @@ function okno(type) {
 
 
 function lvlup() {
-  if(pkt>=lvl_cena[lvl]) {
+  if(lvl<40){
+    if(pkt>=lvl_cena[lvl]) {
     pkt-=lvl_cena[lvl];
     lvl++;
     wartosc=lvl_wartosc[lvl-1];
@@ -97,8 +98,11 @@ function lvlup() {
     document.getElementById("lvl_text").innerHTML="LVL: "+lvl;
 
     local_save();
+    } else {
+      komunikat("nie masz wystarczająco pesos", 0)
+    }
   } else {
-    //alert('za mało kaski byniu');
+    komunikat("osiągnąłeś maksymalny level")
   }
 }
 
@@ -124,11 +128,13 @@ function pasywne_kopanie() {
 pasywne_kopanie_interval = setInterval(pasywne_kopanie, 1000);
 
 function p_kopanie_wartosc(rozmiar) {
-  komunikat();
   if (rozmiar==0 && pkt>=10) { //np 0 - 0.1, 1 - 1, 2 - 10, 3 - 100
     pkt-=10;
     wartosc_passive+=0.1;
     local_save();
     document.getElementById("pasywka_teraz").innerHTML="Wartość pasywki teraz: "+wartosc_passive.toFixed(1);
+    komunikat();
+  } else {
+    komunikat("nie masz wystarczająco pesos", 0)
   }
 }
