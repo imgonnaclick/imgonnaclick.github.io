@@ -1,13 +1,17 @@
-let pkt=0.0; //obecnie
-let wszystkie=0.0;
-let klikniecia=0;
+let pkt=0.0; //potrzebne
 let wartosc=1.0;
+let cena_passive=10;
 let wartosc_passive=0.0;
-let przyznanych_pasywek=0;
 
-let lvl=1; //max lvl 30
-let lvl_wartosc=[1, 1.2, 1.5, 2, 2.5, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 40, 60, 100, 130, 150, 200, 250, 300, 400, 500, 1000, 1300, 2000]; //index+1
-let lvl_cena=[0, 100, 150, 200, 250, 300, 400, 500, 600, 700, 800, 900, 1000, 1200, 1400, 1600, 2000, 40000, 60000, 100000, 130000, 150000, 200000, 250000, 300000, 400000, 500000, 1000000, 1300000, 2000000];
+let wszystkie=0.0; //do statystyk
+let klikniecia=0;
+let przyznanych_pasywek=0;
+let ile_daly_pasywki=0.0;
+
+
+let lvl=1; //max lvl 31
+let lvl_wartosc=[1, 1.2, 1.5, 2, 2.5, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 24, 28, 32, 36, 40, 45, 50, 55, 60, 65, 70, 80, 90, 100]; //index+1
+let lvl_cena=[0, 100, 150, 200, 250, 300, 400, 500, 600, 700, 800, 900, 1000, 1200, 1400, 1600, 2000, 2400, 3000, 3500, 4100, 4800, 5400, 6000, 6600, 7200, 7800, 8500, 9300, 10000, 50000];
 
 let ifdone = 1;
 
@@ -49,6 +53,18 @@ if (localStorage.przyznanych_pasywek) {
   localStorage.przyznanych_pasywek=przyznanych_pasywek;
 }
 
+if (localStorage.cena_passive) {
+  cena_passive = parseInt(localStorage.cena_passive);
+} else {
+  localStorage.cena_passive=cena_passive;
+}
+//
+if (localStorage.ile_daly_pasywki) {
+  ile_daly_pasywki = parseInt(localStorage.ile_daly_pasywki);
+} else {
+  localStorage.ile_daly_pasywki=ile_daly_pasywki;
+}
+
 
 
 
@@ -62,5 +78,6 @@ document.getElementById("wartosc_text").innerHTML="Wartość: "+wartosc;
 document.getElementById("next_wartosc_text").innerHTML="Następna wartość: "+lvl_wartosc[lvl];
 document.getElementById("upgrade").innerHTML="UPGRADE "+lvl_cena[lvl]+"$";
 document.getElementById("pasywka_teraz").innerHTML="Wartość pasywki teraz: "+wartosc_passive.toFixed(1);
+document.getElementById("button_pasywka").innerHTML="0.1 na sekundę - "+cena_passive+"$";
 //tu
 let old_type=0;

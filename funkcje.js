@@ -4,12 +4,14 @@ function local_save() {
   localStorage.wszystkie = wszystkie;
   localStorage.lvl = lvl;
   localStorage.wartosc_passive = wartosc_passive;
+  localStorage.cena_passive = cena_passive;
+  localStorage.przyznanych_pasywek = przyznanych_pasywek;
+  localStorage.ile_daly_pasywki = ile_daly_pasywki;
 }
 
 function lewyxd() {
   pkt+=wartosc;
   document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
-
 
   wszystkie+=wartosc; //staty
   klikniecia++;
@@ -98,6 +100,7 @@ function lvlup() {
     document.getElementById("lvl_text").innerHTML="LVL: "+lvl;
 
     local_save();
+    komunikat("zakupiono level")
     } else {
       komunikat("nie masz wystarczająco pesos", 0)
     }
@@ -116,24 +119,27 @@ function cleareg() {
 function pasywne_kopanie() {
   pkt+=wartosc_passive;
   wszystkie+=wartosc_passive;
+  ile_daly_pasywki+=wartosc_passive;
   if(wartosc_passive>=0.1){
     przyznanych_pasywek++;
+    local_save()
   }
   document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
-
-  localStorage.pkt = pkt;
 }
 
 
 pasywne_kopanie_interval = setInterval(pasywne_kopanie, 1000);
 
 function p_kopanie_wartosc(rozmiar) {
-  if (rozmiar==0 && pkt>=10) { //np 0 - 0.1, 1 - 1, 2 - 10, 3 - 100
-    pkt-=10;
+  if (rozmiar==0 && pkt>=cena_passive) {
+    pkt-=cena_passive;
     wartosc_passive+=0.1;
+    cena_passive=cena_passive+5;
+
     local_save();
     document.getElementById("pasywka_teraz").innerHTML="Wartość pasywki teraz: "+wartosc_passive.toFixed(1);
     komunikat();
+    document.getElementById("button_pasywka").innerHTML="0.1 na sekundę - "+cena_passive+"$";
   } else {
     komunikat("nie masz wystarczająco pesos", 0)
   }
