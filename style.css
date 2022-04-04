@@ -11,5 +11,19 @@ body {
   font-family: ubuntu, sans-serif;
 }
 
+.plusik {
+  position: absolute;
+  pointer-events: none;
+  color: transparent;
+  font-size: 24px;
+  font-family: ubuntu, sans-serif;
+  opacity: 0;
+  transition: 0.3s;
+}
+.plusik_on {
+  opacity: 1;
+  color: white;
+  transition: 0.3s;
+}
 
 /*#0f1315*/

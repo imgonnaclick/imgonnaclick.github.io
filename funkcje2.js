@@ -1,4 +1,3 @@
-
 function komunikat(zawartosc="zakupiono upgrade", typ=1) {
   let idkomunikatu = document.getElementById("idkomunikatu");
   idkomunikatu.innerHTML = zawartosc;

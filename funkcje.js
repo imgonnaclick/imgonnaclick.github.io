@@ -17,7 +17,24 @@ function lewyxd() {
   klikniecia++;
 
   local_save();
+  //plusjeden();
+}
 
+main_obrazek.onclick = function(e) {
+  lewyxd();
+  var ten_div = document.createElement("div");
+  ten_div.className = "plusik plusik_on"
+  ten_div.style.top = e.clientY + "px";
+  ten_div.style.left = (e.clientX)-70 + "px";
+  ten_div.innerHTML = "+"+wartosc;
+  main_kontener.appendChild(ten_div);
+  setTimeout(function() {
+    ten_div.className = "plusik"
+    ten_div.style.top = (e.clientY)-100 + "px"
+    setTimeout(function() {
+      ten_div.remove();
+    },300);
+  },150);
 }
 
 function okno(type) {
@@ -138,8 +155,8 @@ function p_kopanie_wartosc(rozmiar) {
 
     local_save();
     document.getElementById("pasywka_teraz").innerHTML="Wartość pasywki teraz: "+wartosc_passive.toFixed(1);
-    komunikat();
     document.getElementById("button_pasywka").innerHTML="0.1 na sekundę - "+cena_passive+"$";
+    komunikat();
   } else {
     komunikat("nie masz wystarczająco pesos", 0)
   }
