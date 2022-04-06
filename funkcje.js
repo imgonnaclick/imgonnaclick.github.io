@@ -151,7 +151,14 @@ function p_kopanie_wartosc(rozmiar) {
   if (rozmiar==0 && pkt>=cena_passive) {
     pkt-=cena_passive;
     wartosc_passive+=0.1;
-    cena_passive=cena_passive+5;
+
+    if(cena_passive<100){
+      cena_passive=cena_passive+5;
+    } else if(cena_passive>=100 && cena_passive<1000) {
+      cena_passive=cena_passive+10;
+    } else if(cena_passive>=1000) {
+      cena_passive=cena_passive+20;
+    }
 
     local_save();
     document.getElementById("pasywka_teraz").innerHTML="Wartość pasywki teraz: "+wartosc_passive.toFixed(1);
