@@ -13,6 +13,18 @@ let lvl=1; //max lvl 31
 let lvl_wartosc=[1, 1.2, 1.5, 2, 2.5, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 24, 28, 32, 36, 40, 45, 50, 55, 60, 65, 70, 80, 90, 100, 120, 150, 200, 250, 500, 1000]; //index+1
 let lvl_cena=[0, 100, 150, 200, 400, 600, 800, 1000, 1300, 1600, 1900, 2300, 2700, 3100, 3600, 4100, 4600, 5200, 5800, 6400, 7100, 7800, 9000, 10000, 11000, 12500, 15000, 20000, 30000, 50000, 100000, 200000, 300000, 500000, 1000000, 2000000, 5000000];
 
+let lvl_max;
+if(lvl_wartosc.length==lvl_cena.length) {
+    lvl_max = lvl_wartosc.length;
+} else if(lvl_wartosc.length<lvl_cena.length) {
+    lvl_max = lvl_wartosc.length;
+    console.log("wartosci jest mniej o "+(lvl_cena.length-lvl_wartosc.length))
+} else if(lvl_wartosc.length>lvl_cena.length) {
+    lvl_max = lvl_cena.length;
+    console.log("cen jest mniej o "+(lvl_wartosc.length-lvl_cena.length))
+}
+
+
 let ifdone = 1;
 let myszkax;
 let myszkay;

@@ -20,7 +20,7 @@ function komunikat(zawartosc="zakupiono upgrade", typ=1) {
     },2000);
   } else {
     clearTimeout(anim_timeout);
-
+    ifdone=0;
     anim_timeout = setTimeout(function(){
       idkomunikatu.className = "komunikat";
       ifdone = 1;
