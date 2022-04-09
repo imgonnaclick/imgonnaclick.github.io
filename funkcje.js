@@ -163,6 +163,7 @@ function p_kopanie_wartosc(rozmiar) {
     local_save();
     document.getElementById("pasywka_teraz").innerHTML="Wartość pasywki teraz: "+wartosc_passive.toFixed(1);
     document.getElementById("button_pasywka").innerHTML="0.1 na sekundę - "+cena_passive+"$";
+    document.getElementById("pkt_teraz").innerHTML=parseInt(pkt);
     komunikat();
   } else {
     komunikat("nie masz wystarczająco pesos", 0)
