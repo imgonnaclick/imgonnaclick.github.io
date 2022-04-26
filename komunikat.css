@@ -43,7 +43,7 @@
   transition: 0.3s;
   visibility: visible;
   opacity: 1;
-  --webkit-backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
   backdrop-filter: blur(9px);
 
   top: 0;
